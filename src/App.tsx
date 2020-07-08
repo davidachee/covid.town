@@ -44,7 +44,7 @@ function App() {
       <header className="App-header" style={style}>
         <p>
           {deaths?.toLocaleString()} people have died of COVID-19 in the United States.<br />
-          That's more than the population of {location?.city}, {location?.state} with {location?.population.toLocaleString()} people.
+          That's more than the population of <a href={`https://www.google.com/search?q=${location?.city}, ${location?.state}`}>{location?.city}, {location?.state}</a>: {location?.population.toLocaleString()} people.
         </p>
       </header>
       <footer className="App-footer">

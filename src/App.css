@@ -23,7 +23,15 @@
   font-weight: 700;
 }
 
+.App-header a,
+.App-header a:visited,
 .App-footer a,
 .App-footer a:visited {
   color: #bb86fc;
+  transition: color 0.2s ease;
+}
+
+.App-header a:hover,
+.App-footer a:hover {
+  color: #d4b4fa;
 }
