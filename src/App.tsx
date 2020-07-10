@@ -88,7 +88,7 @@ function App() {
         </button>
       </header>
       <footer className="App-footer">
-      COVID-19 data is provided by <a href="https://covidtracking.com">The COVID tracking project</a>.<br/>
+      COVID-19 data is provided by <a href="https://covidtracking.com">The COVID Tracking Project</a>.<br/>
       Population data provided by <a href="https://www.census.gov">The United States Census Bureau</a>.
       </footer>
     </div>
