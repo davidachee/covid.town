@@ -1,37 +1,86 @@
+html {
+  height: -webkit-fill-available;
+}
+
 .App {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .App-header {
-  background-color: rgba(0, 0, 0, .65);
-  min-height: 100vh;
+  align-items: center;
+  background-blend-mode: multiply;
+  background-color: rgba(6, 2, 18, .70);
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  position: relative;
+}
+
+.App-header button {
+  background: white;
+  border: none;
+  border-radius: 25px;
+  color: rgb(6, 2, 18, .70);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  padding: 15px;
+}
+
+.App-header button {
+  background: white;
+  border: none;
+  border-radius: 25px;
+  color: rgb(6, 2, 18);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  padding: 15px;
+  transition: background 0.2s ease;
+}
+
+.App-header button:hover {
+  background: var(--color-highlight);
+}
+
+.App-header button:focus {
+  outline: none;
+}
+
+.App-header p {
   font-size: calc(10px + 2vmin);
-  background-blend-mode: multiply;
-  background-size: cover;
+  font-weight: 200;
+  padding: 0 15px;
+}
+
+.App-header-emphasis {
+  font-size: calc(14px + 2vmin);
+  font-weight: 600;
 }
 
 .App-footer {
+  bottom: 15px;
+  font-family: var(--font-sans);
+  font-size: calc(4px + 1vmin);
+  font-weight: 500;
+  line-height: 21px;
   position: absolute;
-  bottom: 5px;
   width: 100vw;
-  font-size: 0.8em;
-  font-weight: 700;
 }
 
 .App-header a,
 .App-header a:visited,
 .App-footer a,
 .App-footer a:visited {
-  color: #bb86fc;
+  color: var(--color-highlight);
   transition: color 0.2s ease;
 }
 
 .App-header a:hover,
 .App-footer a:hover {
-  color: #d4b4fa;
+  color: var(--color-action);
 }
