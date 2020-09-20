@@ -1,3 +1,4 @@
+import { startCase } from 'lodash'
 import React, { useCallback, useState } from 'react'
 import './App.css'
 import { MAX_LOCATION_LENGTH } from './data/constants'
@@ -26,7 +27,7 @@ function App() {
       <header className="App-header" style={style}>
         <p>
           {deaths?.toLocaleString()} people have died of COVID-19 in the United States.<br />
-          <span className="App-header-emphasis">That's more than the population of <a href={`https://www.google.com/search?q=${displayCity?.city}, ${displayCity?.state}`}>{displayCity?.city}, {displayCity?.state}</a>: {displayCity?.population.toLocaleString()} people.</span>
+          <span className="App-header-emphasis">That's more than the population of <a href={`https://www.google.com/search?q=${displayCity?.city}, ${displayCity?.state}`}>{startCase(displayCity?.city)}, {displayCity?.state}</a>: {displayCity?.population.toLocaleString()} people.</span>
         </p>
         <button onClick={onButtonClick}>
           View Another City
