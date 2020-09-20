@@ -4,13 +4,18 @@ import './App.css'
 import { MAX_LOCATION_LENGTH } from './data/constants'
 import { useCovidData } from './hooks/useCovidData'
 import { useDisplaceCity } from './hooks/useDisplayCity'
+import { useNearestPopulations } from './hooks/useNearestPopulations'
+import { usePreloadImages } from './hooks/usePreloadImages'
 import { useStyle } from './hooks/useStyle'
 
 function App() {
   const deaths = useCovidData()
   const [viewedLocations, setViewedLocations] = useState<string[]>([])
-  const displayCity = useDisplaceCity(deaths, viewedLocations)
+  const nearestPopulations = useNearestPopulations(deaths)
+  const displayCity = useDisplaceCity(nearestPopulations, viewedLocations)
   const style = useStyle(displayCity)
+
+  usePreloadImages(nearestPopulations, displayCity)
 
   const onButtonClick = useCallback(() => {
     if (displayCity) {
