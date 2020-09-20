@@ -1,8 +1,7 @@
 import { CSSProperties, useMemo } from "react"
+import { MAPS_API_KEY } from "../data/constants"
 import { DisplayCity } from "../types/DisplayCity"
 import { useInnerHeight } from "./useInnerHeight"
-
-const MAPS_API_KEY = 'AIzaSyC0K7dVWG5tYhu05ij1HwODzC4ZPgsuBpI'
 
 export function useStyle(displayCity: DisplayCity | null) {
     const height = useInnerHeight()
